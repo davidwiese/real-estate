@@ -372,9 +372,9 @@ body {
 
 .card .icon-btn {
   right: 20px;
-  /* opacity: 0;
+  opacity: 0;
   visibility: hidden;
-  scale: 0.8; */
+  scale: 0.8;
   transition: var(--transition-duration-quick) var(--transition-easing-quick);
 }
 
@@ -384,6 +384,51 @@ body {
 
 .fav-btn.active .material-symbols-rounded {
   font-variation-settings: "FILL" 1;
+}
+
+.card:where(:hover, :focus-within) .icon-btn {
+  scale: 1;
+  opacity: 1;
+  visibility: visible;
+}
+
+.card-content {
+  padding: 20px 20px 24px;
+}
+
+.card-title {
+  margin-block: 8px;
+  color: var(--neutral-20);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform: var(--transition-duration-quick) var(--transition-easing-quick);
+}
+
+.card-title:where(:hover, :focus-visible) {
+  color: var(--primary-100);
+}
+
+.card-text {
+  color: var(--neutral-40);
+}
+
+.card-meta-list {
+  padding-block-start: 16px;
+  margin-block-start: 16px;
+  border-block-start: 1px solid var(--neutral-90);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.card .meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--neutral-20);
 }
 
 /*-------------------------------------*\
@@ -482,7 +527,9 @@ body {
   min-width: 100%;
 }
 
+/*-------------------------------------*\
 /* Hero */
+/*-------------------------------------*/
 .hero-banner {
   display: none;
 }
@@ -578,4 +625,22 @@ body {
   min-height: 100%;
   pointer-events: none;
   z-index: -2;
+}
+
+/*-------------------------------------*\
+/* Property */
+/*-------------------------------------*/
+.property {
+  padding-block-start: 60px;
+}
+
+.property .section-text {
+  margin-block: 8px 16px;
+  color: var(--neutral-30);
+}
+
+.property-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
 }
