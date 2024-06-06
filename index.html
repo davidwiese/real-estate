@@ -1200,10 +1200,18 @@
       <div class="footer-bottom">
         <div class="container">
           <p class="copyright body-medium">
-            Copyright &#169; 2023 David Wiese. All rights reserved.
+            &copy; <span id="current-year"></span> <a href="http://summitconsulting.dev" target="_blank" style="text-decoration:underline;">Summit Consulting</a>. All rights
+					reserved.
           </p>
         </div>
       </div>
     </footer>
+
+    <script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const currentYear = new Date().getFullYear();
+				document.getElementById("current-year").textContent = currentYear;
+			});
+    </script>
   </body>
 </html>
